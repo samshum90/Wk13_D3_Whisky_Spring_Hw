@@ -28,10 +28,10 @@ public class WhiskyController {
 
     ){
 
-        if (region != null) {
+        if (containing != null) {
             return new ResponseEntity<>(whiskyRepository.findWhiskyByNameContaining( containing), HttpStatus.OK);
         }
-        if (region != null) {
+        if (start != null) {
             return new ResponseEntity<>(whiskyRepository.findWhiskyByNameStartsWith( start), HttpStatus.OK);
         }
         if (name != null) {
